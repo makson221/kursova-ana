@@ -1,0 +1,13 @@
+## Visual Studio / .NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+TestResults/
+
+## База даних, що створюється під час запуску
+*.db
+*.db-shm
+*.db-wal
