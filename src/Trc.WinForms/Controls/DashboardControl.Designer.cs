@@ -55,9 +55,9 @@
             this.split.Panel1.Controls.Add(this.grpDebtors);
             this.split.Panel2.Controls.Add(this.grpEvents);
             this.split.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.split.Location = new System.Drawing.Point(0, 268);
+            this.split.Location = new System.Drawing.Point(0, 293);
             this.split.Name = "split";
-            this.split.Size = new System.Drawing.Size(1000, 360);
+            this.split.Size = new System.Drawing.Size(1000, 335);
             this.split.SplitterDistance = 520;
             this.split.TabIndex = 2;
             // 
@@ -101,12 +101,11 @@
             // 
             // flowCards
             // 
-            this.flowCards.AutoScroll = true;
             this.flowCards.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowCards.Location = new System.Drawing.Point(0, 48);
             this.flowCards.Name = "flowCards";
             this.flowCards.Padding = new System.Windows.Forms.Padding(6);
-            this.flowCards.Size = new System.Drawing.Size(1000, 220);
+            this.flowCards.Size = new System.Drawing.Size(1000, 245);
             this.flowCards.TabIndex = 1;
             // 
             // pnlHeader

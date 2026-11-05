@@ -140,7 +140,7 @@
             this.numYear.Size = new System.Drawing.Size(80, 23);
             this.numYear.TabIndex = 1;
             this.numYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numYear.ThousandsSeparator = true;
+            this.numYear.ThousandsSeparator = false;
             this.numYear.ValueChanged += new System.EventHandler(this.numYear_ValueChanged);
             // 
             // btnBuild

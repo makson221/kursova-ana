@@ -1,4 +1,5 @@
-﻿using Trc.Core.Common;
+﻿using System.Globalization;
+using Trc.Core.Common;
 using Trc.Core.Data;
 using Trc.WinForms.Forms;
 using Trc.WinForms.Infrastructure;
@@ -11,6 +12,13 @@ internal static class Program
     [STAThread]
     private static void Main()
     {
+        // Українські формати чисел і дат незалежно від налаштувань Windows.
+        var culture = CultureInfo.GetCultureInfo("uk-UA");
+        CultureInfo.DefaultThreadCurrentCulture = culture;
+        CultureInfo.DefaultThreadCurrentUICulture = culture;
+        Thread.CurrentThread.CurrentCulture = culture;
+        Thread.CurrentThread.CurrentUICulture = culture;
+
         ApplicationConfiguration.Initialize();
         Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
         Application.ThreadException += (_, e) => UiHelper.ShowError(null, e.Exception);

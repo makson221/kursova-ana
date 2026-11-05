@@ -111,8 +111,8 @@
             this.lbl5.AutoSize = true;
             this.lbl5.Location = new System.Drawing.Point(16, 166);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(147, 15);
-            this.lbl5.Text = "Підтвердження пароля:";
+            this.lbl5.Size = new System.Drawing.Size(119, 15);
+            this.lbl5.Text = "Повторіть пароль:";
             // 
             // txtConfirm
             // 

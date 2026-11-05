@@ -1,4 +1,5 @@
-﻿using Trc.Core.Common;
+﻿using System.Security.Cryptography;
+using Trc.Core.Common;
 using Trc.Core.Data;
 using Trc.Core.Models;
 
@@ -68,5 +69,16 @@ public class AuthServiceTests
     {
         using var t = new TestDatabase();
         Assert.Throws<BusinessException>(() => t.Auth.AddUser(login, "Тест", UserRole.Cashier, "secret1"));
+    }
+
+    [Theory]
+    [InlineData("admin123", 1, 32)]
+    [InlineData("пароль", 1000, 32)]
+    [InlineData("long-password", 10, 50)]   // довжина більша за один блок SHA-256
+    public void Pbkdf2_MatchesFrameworkImplementation(string password, int iterations, int length)
+    {
+        var salt = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+        var expected = Rfc2898DeriveBytes.Pbkdf2(password, salt, iterations, HashAlgorithmName.SHA256, length);
+        Assert.Equal(expected, PasswordHasher.Pbkdf2Sha256(password, salt, iterations, length));
     }
 }

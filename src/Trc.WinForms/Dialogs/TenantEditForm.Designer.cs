@@ -64,8 +64,8 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Location = new System.Drawing.Point(16, 58);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(140, 15);
-            this.lbl2.Text = "Код ЄДРПОУ / РНОКПП:";
+            this.lbl2.Size = new System.Drawing.Size(112, 15);
+            this.lbl2.Text = "ЄДРПОУ / РНОКПП:";
             // 
             // txtTaxCode
             // 

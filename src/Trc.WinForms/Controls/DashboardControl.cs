@@ -13,6 +13,7 @@ public partial class DashboardControl : UserControl, ISectionControl
         InitializeComponent();
         UiHelper.SetupGrid(gridDebtors);
         UiHelper.SetupGrid(gridEvents);
+        Resize += (_, _) => FitCards();
     }
 
     public void Initialize(AppServices services)
@@ -48,12 +49,23 @@ public partial class DashboardControl : UserControl, ISectionControl
         AddCard("Паркінг", $"{s.ParkingOccupied} / {s.ParkingCapacity}", "зайнято місць", Color.SlateGray);
         AddCard("Заходи", s.UpcomingEvents.ToString(), "заплановано", Color.MediumPurple);
         flowCards.ResumeLayout();
+        FitCards();
 
         UiHelper.Bind(gridDebtors, _services.Payments.GetDebtors().Select(DebtorRow.From));
         UiHelper.Bind(gridEvents, _services.Events.GetAll(includePast: false)
             .Where(x => x.Event.Status == EventStatus.Planned)
             .Take(10)
             .Select(x => new UpcomingEventRow(x.Event.StartTime, x.Event.Title, x.FreeSeats)));
+    }
+
+    /// <summary>Підбирає висоту панелі так, щоб усі картки були видимі при будь-якій ширині вікна.</summary>
+    private void FitCards()
+    {
+        if (flowCards.Controls.Count == 0)
+            return;
+        flowCards.PerformLayout();
+        var bottom = flowCards.Controls.Cast<Control>().Max(c => c.Bottom + c.Margin.Bottom);
+        flowCards.Height = bottom + flowCards.Padding.Bottom;
     }
 
     /// <summary>Картка показника: назва, значення та підпис.</summary>

@@ -43,7 +43,8 @@
             // 
             // dtValue
             // 
-            this.dtValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtValue.CustomFormat = "dd.MM.yyyy";
+            this.dtValue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtValue.Location = new System.Drawing.Point(16, 60);
             this.dtValue.Name = "dtValue";
             this.dtValue.Size = new System.Drawing.Size(200, 23);

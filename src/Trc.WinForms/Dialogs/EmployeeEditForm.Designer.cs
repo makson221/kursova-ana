@@ -140,7 +140,8 @@
             // 
             // dtHire
             // 
-            this.dtHire.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtHire.CustomFormat = "dd.MM.yyyy";
+            this.dtHire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtHire.Location = new System.Drawing.Point(170, 198);
             this.dtHire.Name = "dtHire";
             this.dtHire.Size = new System.Drawing.Size(140, 23);

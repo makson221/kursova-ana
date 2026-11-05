@@ -112,7 +112,8 @@
             // 
             // dtStart
             // 
-            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStart.CustomFormat = "dd.MM.yyyy";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtStart.Location = new System.Drawing.Point(170, 126);
             this.dtStart.Name = "dtStart";
             this.dtStart.Size = new System.Drawing.Size(140, 23);
@@ -147,7 +148,8 @@
             // 
             // dtEnd
             // 
-            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtEnd.CustomFormat = "dd.MM.yyyy";
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEnd.Location = new System.Drawing.Point(170, 198);
             this.dtEnd.Name = "dtEnd";
             this.dtEnd.Size = new System.Drawing.Size(140, 23);
@@ -158,8 +160,8 @@
             this.lbl7.AutoSize = true;
             this.lbl7.Location = new System.Drawing.Point(16, 238);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(168, 15);
-            this.lbl7.Text = "Орендна плата, грн/міс.:";
+            this.lbl7.Size = new System.Drawing.Size(119, 15);
+            this.lbl7.Text = "Оренда, грн/міс.:";
             // 
             // numRent
             // 

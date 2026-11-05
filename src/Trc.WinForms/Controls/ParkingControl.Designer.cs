@@ -182,7 +182,8 @@
             // 
             // dtFrom
             // 
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFrom.CustomFormat = "dd.MM.yyyy";
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFrom.Location = new System.Drawing.Point(22, 7);
             this.dtFrom.Name = "dtFrom";
             this.dtFrom.Size = new System.Drawing.Size(110, 23);
@@ -198,7 +199,8 @@
             // 
             // dtTo
             // 
-            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtTo.CustomFormat = "dd.MM.yyyy";
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtTo.Location = new System.Drawing.Point(168, 7);
             this.dtTo.Name = "dtTo";
             this.dtTo.Size = new System.Drawing.Size(110, 23);
