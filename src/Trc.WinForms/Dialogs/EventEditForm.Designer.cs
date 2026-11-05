@@ -152,7 +152,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(262, 480);
+            this.btnOk.Location = new System.Drawing.Point(262, 282);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(105, 30);
             this.btnOk.TabIndex = 6;
@@ -163,7 +163,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(375, 480);
+            this.btnCancel.Location = new System.Drawing.Point(375, 282);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 30);
             this.btnCancel.TabIndex = 7;
@@ -176,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AcceptButton = this.btnOk;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(490, 524);
+            this.ClientSize = new System.Drawing.Size(490, 326);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

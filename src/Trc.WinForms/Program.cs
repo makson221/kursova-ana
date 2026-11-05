@@ -22,6 +22,7 @@ internal static class Program
         ApplicationConfiguration.Initialize();
         Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
         Application.ThreadException += (_, e) => UiHelper.ShowError(null, e.Exception);
+        AppDomain.CurrentDomain.UnhandledException += (_, e) => LogFatalError(e.ExceptionObject);
 
         AppServices services;
         try
@@ -55,6 +56,20 @@ internal static class Program
             Application.Run(main);
             if (!main.LogoutRequested)
                 return;
+        }
+    }
+
+    /// <summary>Записує неперехоплену помилку у файл error.log поруч із програмою.</summary>
+    private static void LogFatalError(object exception)
+    {
+        try
+        {
+            var path = Path.Combine(AppContext.BaseDirectory, "error.log");
+            File.AppendAllText(path, $"[{DateTime.Now:dd.MM.yyyy HH:mm:ss}] {exception}{Environment.NewLine}{Environment.NewLine}");
+        }
+        catch
+        {
+            // Якщо записати журнал неможливо, нічого не робимо: програма вже аварійно завершується.
         }
     }
 }

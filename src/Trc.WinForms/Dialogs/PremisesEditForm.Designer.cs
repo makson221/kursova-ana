@@ -183,14 +183,14 @@
             // 
             this.lblRent.AutoSize = true;
             this.lblRent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblRent.Location = new System.Drawing.Point(170, 572);
+            this.lblRent.Location = new System.Drawing.Point(170, 338);
             this.lblRent.Name = "lblRent";
             this.lblRent.Size = new System.Drawing.Size(200, 17);
             this.lblRent.Text = "Базова орендна плата: —";
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(262, 608);
+            this.btnOk.Location = new System.Drawing.Point(262, 374);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(105, 30);
             this.btnOk.TabIndex = 7;
@@ -201,7 +201,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(375, 608);
+            this.btnCancel.Location = new System.Drawing.Point(375, 374);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 30);
             this.btnCancel.TabIndex = 8;
@@ -214,7 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AcceptButton = this.btnOk;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(490, 652);
+            this.ClientSize = new System.Drawing.Size(490, 418);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
